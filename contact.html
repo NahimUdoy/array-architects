@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Array Architects in Dhaka, Bangladesh. Get a free quote for your architectural project. Call 01844-520201 or fill out our project inquiry form.">
+    <meta name="keywords" content="contact Array Architects, architecture consultation, Dhaka architects, project inquiry">
+    <meta name="author" content="Array Architects">
+    <title>Contact Us - Array Architects</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Array</span>
+                <span class="brand-accent">Architects</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html">
+                            <span>Careers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-call" href="tel:+8801844520201">
+                            <i class="fas fa-phone"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="hero-background" style="background-image: url('assets/images/banner1.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="hero-badge">
+                    <span>Start Your Project</span>
+                </div>
+                <h1 class="page-hero-title">Get In Touch</h1>
+                <p class="page-hero-tagline">Let's discuss your project</p>
+                <p class="page-hero-description">Ready to bring your architectural vision to life? Contact us today for a free consultation. We're here to answer your questions and help you take the first step toward your dream project.</p>
+                <div class="page-hero-contact">
+                    <a href="tel:+8801844520201" class="page-contact-btn">
+                        <i class="fas fa-phone"></i>
+                        <span>Call: 01844-520201</span>
+                    </a>
+                    <a href="https://wa.me/8801844520201" target="_blank" class="page-contact-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-8 mb-4">
+                    <h2 class="mb-4">Project Inquiry Form</h2>
+                    <p class="text-light mb-4">Fill out the form below and we'll get back to you within 24 hours. All fields marked with * are required.</p>
+                    
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <strong>Thank you!</strong> Your inquiry has been submitted successfully. We'll contact you soon.
+                    </div>
+
+                    <form id="projectInquiryForm">
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                            <div class="error-message" id="fullNameError">Please enter your full name.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone / WhatsApp *</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                            <div class="error-message" id="phoneError">Please enter a valid phone number.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectType" class="form-label">Project Type *</label>
+                            <select class="form-control" id="projectType" name="projectType" required>
+                                <option value="">Select Project Type</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="institutional">Institutional</option>
+                                <option value="interior">Interior Design</option>
+                                <option value="urban-planning">Urban Planning</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="projectTypeError">Please select a project type.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectLocation" class="form-label">Project Location *</label>
+                            <input type="text" class="form-control" id="projectLocation" name="projectLocation" placeholder="City, Area, or Address" required>
+                            <div class="error-message" id="projectLocationError">Please enter the project location.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Estimated Budget (Optional)</label>
+                            <select class="form-control" id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-10lakh">Under 10 Lakh BDT</option>
+                                <option value="10-25lakh">10 - 25 Lakh BDT</option>
+                                <option value="25-50lakh">25 - 50 Lakh BDT</option>
+                                <option value="50-1crore">50 Lakh - 1 Crore BDT</option>
+                                <option value="1-5crore">1 - 5 Crore BDT</option>
+                                <option value="over-5crore">Over 5 Crore BDT</option>
+                                <option value="not-sure">Not Sure Yet</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectDescription" class="form-label">Project Description *</label>
+                            <textarea class="form-control" id="projectDescription" name="projectDescription" rows="5" placeholder="Tell us about your project, requirements, timeline, and any specific needs..." required></textarea>
+                            <div class="error-message" id="projectDescriptionError">Please provide a project description.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMethod" class="form-label">Preferred Contact Method *</label>
+                            <select class="form-control" id="contactMethod" name="contactMethod" required>
+                                <option value="">Select Preferred Method</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="email">Email</option>
+                                <option value="any">Any Method</option>
+                            </select>
+                            <div class="error-message" id="contactMethodError">Please select your preferred contact method.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg">Submit Inquiry</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Address</h5>
+                                <p>House: 5/1, Block: E, Lalmatia<br>Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5>Phone</h5>
+                                <p><a href="tel:+8801844520201">01844-520201</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p><a href="mailto:arrayarchitectsbd@gmail.com">arrayarchitectsbd@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5>Business Hours</h5>
+                                <p>Monday - Tuesday: 10:00 AM – 7:00 PM<br>
+                                   Thursday - Sunday: 10:00 AM – 7:00 PM<br>
+                                   <strong>Closed on Wednesday</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h5>WhatsApp</h5>
+                                <p><a href="https://wa.me/8801844520201" target="_blank">Chat with us on WhatsApp</a></p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5 class="mb-3">Follow Us</h5>
+                            <div style="display: flex; gap: 1rem;">
+                                <a href="https://www.facebook.com/arrayarchitectsbd/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-size: 1.5rem; transition: var(--transition);" title="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" style="color: var(--accent-color); font-size: 1.5rem; transition: var(--transition);" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" style="color: var(--accent-color); font-size: 1.5rem; transition: var(--transition);" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map Placeholder -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="mb-4">Find Us on Map</h3>
+                    <div style="width: 100%; height: 400px; background: var(--bg-light); display: flex; align-items: center; justify-content: center; border: 2px solid var(--border-color);">
+                        <div style="text-align: center; color: var(--text-light);">
+                            <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-color);"></i>
+                            <p>Google Map Integration<br><small>House: 5/1, Block: E, Lalmatia, Dhaka</small></p>
+                            <p class="mt-3"><a href="https://www.google.com/maps/search/?api=1&query=Level+2,+16,+2+Block+B,+Dhaka" target="_blank" class="btn btn-outline">Open in Google Maps</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h1>Have a project in mind? Let's discuss.</h1>
+            <p>Ready to bring your architectural vision to life? Get in touch with us today and let's create something extraordinary together.</p>
+            <a href="tel:+8801844520201" class="btn btn-accent me-3"><i class="fas fa-phone"></i> Call Now</a>
+            <a href="https://wa.me/8801844520201" target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Array Architects</h5>
+                    <p>We turn ideas into works of art. Creating architectural excellence in Dhaka, Bangladesh.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> House: 5/1, Block: E, Lalmatia, Dhaka</p>
+                    <p><i class="fas fa-phone me-2"></i> <a href="tel:+8801844520201">01844-520201</a></p>
+                    <p><i class="fas fa-clock me-2"></i> 10:00 AM – 7:00 PM (Closed Wednesday)</p>
+                    <div class="mt-3">
+                        <a href="https://www.facebook.com/arrayarchitectsbd/" target="_blank" rel="noopener noreferrer" class="me-3" style="color: rgba(255, 255, 255, 0.8); font-size: 1.5rem; transition: var(--transition);" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Array Architects. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING CONTACT WIDGET ===== -->
+    <div class="floating-contact">
+        <a href="tel:+8801844520201" class="floating-btn call" title="Call Now">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/8801844520201" target="_blank" class="floating-btn whatsapp" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:arrayarchitectsbd@gmail.com" class="floating-btn email" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
