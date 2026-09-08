@@ -29,6 +29,22 @@ It is a static frontend (no build step) and is suitable for architecture firms, 
 
 ---
 
+## Bangla video tutorial
+
+Easy Bangla walkthrough of the full website (~6 minutes). The picture and the voice stay on the same thing: menu, Call Now, services, projects, contact form, careers, mobile, and how to open the project locally.
+
+[![Play Bangla tutorial](assets/screenshots/01-home.png)](assets/tutorial/Array-Architects-Bangla-Overview.mp4)
+
+**Watch / download:** [Array-Architects-Bangla-Overview.mp4](assets/tutorial/Array-Architects-Bangla-Overview.mp4)
+
+<video src="assets/tutorial/Array-Architects-Bangla-Overview.mp4" controls preload="metadata" width="100%">
+  <a href="assets/tutorial/Array-Architects-Bangla-Overview.mp4">Play the Bangla tutorial video</a>
+</video>
+
+Voice: Bangladesh Bangla. Covers Home, About, Services, Projects, Contact, Careers, footer credit, and local XAMPP setup.
+
+---
+
 ## Visual overview
 
 Screenshots from the live site, ready to drop into a portfolio, pitch, or GitHub README.
@@ -222,7 +238,8 @@ array-architects/
 │   ├── css/style.css
 │   ├── js/main.js
 │   ├── images/
-│   └── screenshots/    Page captures for README and portfolios
+│   ├── screenshots/    Page captures for README and portfolios
+│   └── tutorial/       Bangla overview video
 ├── render.yaml         Render static-site config
 └── README.md
 ```

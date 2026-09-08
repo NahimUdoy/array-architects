@@ -1,0 +1,170 @@
+[
+  {
+    "id": "01-intro",
+    "kind": "card",
+    "title": "Array Architects",
+    "subtitle": "Website tutorial",
+    "label": "পরিচিতি",
+    "text": "আসসালামু আলাইকুম। আজকে আমি Array Architects ওয়েবসাইটটা দেখাব। এটা ঢাকার একটি আর্কিটেকচার ফার্মের সাইট। আমি পেজগুলো দেখাব, আর ঠিক যে জিনিসটা স্ক্রিনে আছে, সেটাই বলব। শেষে বলব কিভাবে এই প্রজেক্ট খুলে ব্যবহার করবেন।"
+  },
+  {
+    "id": "02-home-hero",
+    "kind": "shot",
+    "file": "home.png",
+    "label": "হোমপেজ",
+    "text": "এখন হোমপেজ দেখা যাচ্ছে। মাঝে বড় করে লেখা Array Architects। নিচে ইংরেজিতে লেখা, We turn ideas into works of art। মানে, আপনার আইডিয়াকে সুন্দর ডিজাইনে রূপ দেওয়া। পেছনে বিল্ডিং এর ছবি।"
+  },
+  {
+    "id": "03-navbar",
+    "kind": "shot",
+    "file": "navbar.png",
+    "label": "উপরের মেনু",
+    "text": "এখন উপরের মেনু দেখুন। বামে লোগো Array Architects। মাঝে পেজের নাম—Home, About, Services, Projects, Contact, Careers। যে পেজে আছেন সেটা হলুদ করে হাইলাইট হয়। ডানদিকে সবুজ Call Now বাটন। এখানে চাপলে ফোন যাবে, নম্বর শূন্য এক আট চার চার, পাঁচ দুই শূন্য দুই শূন্য এক।"
+  },
+  {
+    "id": "04-hero-buttons",
+    "kind": "shot",
+    "file": "hero-cta.png",
+    "label": "হোম বাটন",
+    "text": "হিরো সেকশনে দুইটা বাটন দেখা যাচ্ছে। সোনালি বাটন লেখা Start Your Project। এটা Contact পেজে নিয়ে যায়। পাশের বাটন View Our Work। এটা প্রজেক্টের ছবি দেখায়।"
+  },
+  {
+    "id": "05-stats",
+    "kind": "shot",
+    "file": "stats.png",
+    "label": "পরিসংখ্যান",
+    "text": "এখন নিচের তিনটা নম্বর দেখুন। পাঁচশোর বেশি প্রজেক্ট কমপ্লিট। পনেরো বছরের অভিজ্ঞতা। আর আটানব্বই শতাংশ ক্লায়েন্ট সন্তুষ্টি। এগুলো বিশ্বাস তৈরি করে।"
+  },
+  {
+    "id": "06-floating",
+    "kind": "shot",
+    "file": "floating.png",
+    "label": "কল ও হোয়াটসঅ্যাপ",
+    "text": "ডান পাশে নিচে তিনটা গোল বাটন ভাসছে। সবুজটা ফোন। আরেকটা সবুজ হোয়াটসঅ্যাপ। সোনালিটা ইমেইল। যেকোনো পেজ থেকেই ক্লায়েন্ট এখানে চাপতে পারবে।"
+  },
+  {
+    "id": "07-services-home",
+    "kind": "shot",
+    "file": "home-services.png",
+    "label": "হোম — সার্ভিস",
+    "text": "স্ক্রিনে Our Services কার্ডগুলো। চারটা কাজ—Architectural Design, Interior Design, Urban Planning, আর Project Consultation। Learn More চাপলে বিস্তারিত Services পেজে যাবে।"
+  },
+  {
+    "id": "08-featured",
+    "kind": "shot",
+    "file": "home-projects.png",
+    "label": "হোম — প্রজেক্ট",
+    "text": "এখন Featured Projects। তিনটা কাজের ছবি—রেসিডেনশিয়াল কমপ্লেক্স, অফিস, আর ভিলা। View Project চাপলে পুরো পোর্টফোলিও খুলবে।"
+  },
+  {
+    "id": "09-about",
+    "kind": "shot",
+    "file": "about.png",
+    "label": "অ্যাবাউট পেজ",
+    "text": "এখন About পেজ খোলা। এখানে ফার্মের পরিচয়। লেখা আছে, দুই হাজার দশ সাল থেকে কাজ করছে। ভিশন, মিশন, আর ভ্যালু—Excellence, Innovation, Sustainability, Integrity।"
+  },
+  {
+    "id": "10-services",
+    "kind": "shot",
+    "file": "services.png",
+    "label": "সার্ভিস পেজ",
+    "text": "এখন Services পেজ। উপরে লেখা Our Services। নিচে চারটা সার্ভিস বিস্তারিত। আরও নিচে কাজের ধাপ—Consultation, Design Development, Documentation, Construction। মানে পরামর্শ থেকে নির্মাণ পর্যন্ত।"
+  },
+  {
+    "id": "11-filters",
+    "kind": "shot",
+    "file": "project-filters.png",
+    "label": "প্রজেক্ট ফিল্টার",
+    "text": "এখন Projects পেজের ফিল্টার দেখুন। All Projects, Residential, Commercial, Institutional, Interior Design। যে বাটনে চাপবেন, শুধু সেই ধরনের কাজ দেখাবে।"
+  },
+  {
+    "id": "12-grid",
+    "kind": "shot",
+    "file": "project-grid.png",
+    "label": "প্রজেক্ট গ্রিড",
+    "text": "এগুলো প্রজেক্টের ছবির গ্রিড। রেসিডেনশিয়াল, কমার্শিয়াল, ইনস্টিটিউশনাল, ইন্টিরিয়র—সব একসাথে। যেকোনো কার্ডে ক্লিক করলে বড় করে খুলবে।"
+  },
+  {
+    "id": "13-modal",
+    "kind": "shot",
+    "file": "project-modal.png",
+    "label": "প্রজেক্ট ডিটেইলস",
+    "text": "ক্লিক করার পর এই পপআপ খোলে। এখানে প্রজেক্টের নাম, লোকেশন, বছর, সাইজ, স্ট্যাটাস আর ফিচার দেখা যায়। Start Similar Project চাপলে Contact ফর্মে যাবে।"
+  },
+  {
+    "id": "14-contact",
+    "kind": "shot",
+    "file": "contact-form.png",
+    "label": "যোগাযোগ ফর্ম",
+    "text": "এখন Contact পেজের ফর্ম। এখানে নাম, ইমেইল, ফোন বা হোয়াটসঅ্যাপ, প্রজেক্ট টাইপ, লোকেশন, বাজেট, আর কাজের বিবরণ লিখতে হয়। খালি রাখলে সাইট এরর দেখাবে।"
+  },
+  {
+    "id": "15-contact-side",
+    "kind": "shot",
+    "file": "contact-info.png",
+    "label": "অফিস ও হোয়াটসঅ্যাপ",
+    "text": "ফর্মের পাশে অফিসের ঠিকানা, ফোন নম্বর, ইমেইল, খোলার সময়। উপরে সরাসরি কল আর হোয়াটসঅ্যাপ বাটনও আছে। মানে ফর্ম না ভরেও যোগাযোগ করা যায়।"
+  },
+  {
+    "id": "16-careers",
+    "kind": "shot",
+    "file": "careers-jobs.png",
+    "label": "চাকরির খবর",
+    "text": "এখন Careers পেজ। দুইটা চাকরির কার্ড দেখা যাচ্ছে। একটা Lumion অ্যানিমেশন স্পেশালিস্ট। আরেকটা আর্কিটেকচার আর ইন্টিরিয়র ডিজাইন। Apply Now চাপলে নিচের ফর্মে পদের নাম বসে যাবে।"
+  },
+  {
+    "id": "17-apply",
+    "kind": "shot",
+    "file": "careers-form.png",
+    "label": "আবেদন ফর্ম",
+    "text": "এই আবেদন ফর্ম। নাম, ইমেইল, ফোন, কোন পদে আবেদন, পোর্টফোলিও লিংক, আর কভার মেসেজ। জমা দিলে টিম পরে যোগাযোগ করতে পারবে।"
+  },
+  {
+    "id": "18-mobile",
+    "kind": "shot",
+    "file": "mobile.png",
+    "label": "মোবাইল ভিউ",
+    "text": "মোবাইলে সাইট এমন দেখায়। উপরে লোগো আর মেনু আইকন। নিচে কল আর হোয়াটসঅ্যাপ বাটন থাকে। ফোন থেকেও পুরো সাইট ব্যবহার করা যায়।"
+  },
+  {
+    "id": "19-footer",
+    "kind": "shot",
+    "file": "footer.png",
+    "label": "ফুটার",
+    "text": "পেজের একদম নিচে ফুটার। কপিরাইট Array Architects। পাশে লেখা Developed by Udoy। Udoy শব্দটা সোনালি লিংক। ক্লিক করলে ডেভেলপারের ওয়েবসাইট খুলবে, udoyweb.netlify.app।"
+  },
+  {
+    "id": "20-how-to",
+    "kind": "card",
+    "title": "কিভাবে খুলবেন",
+    "subtitle": "XAMPP local server",
+    "body": "1. XAMPP চালান\n2. ফোল্ডার রাখুন htdocs-এ\n3. ব্রাউজারে খুলুন\nlocalhost/2026/array-architects/",
+    "label": "ব্যবহার",
+    "text": "প্রজেক্ট ব্যবহার করা সহজ। এটা শুধু HTML, CSS আর JavaScript। আলাদা বিল্ড লাগে না। XAMPP চালিয়ে htdocs-এ array-architects ফোল্ডার রাখুন। তারপর ব্রাউজারে লিখুন localhost স্ল্যাশ 2026 স্ল্যাশ array-architects।"
+  },
+  {
+    "id": "21-files",
+    "kind": "card",
+    "title": "ফাইলগুলো",
+    "subtitle": "কোন পেজ কোন ফাইল",
+    "body": "index.html    হোম\nabout.html    অ্যাবাউট\nservices.html সার্ভিস\nprojects.html প্রজেক্ট\ncontact.html  যোগাযোগ\ncareers.html  চাকরি",
+    "label": "ফোল্ডার",
+    "text": "ফোল্ডারে এই HTML ফাইলগুলো আছে। index মানে হোম। about, services, projects, contact, careers। ছবি, স্টাইল আর স্ক্রিপ্ট আছে assets ফোল্ডারে। কোন পেজ বদলাতে চাইলে সেই HTML খুললেই হবে।"
+  },
+  {
+    "id": "22-live",
+    "kind": "card",
+    "title": "লাইভ ওয়েবসাইট",
+    "subtitle": "array-architects.onrender.com",
+    "label": "লাইভ লিংক",
+    "text": "লাইভ সাইট আছে Render-এ। লিংক array-architects.onrender.com। এই লিংকে গেলে হোম, অ্যাবাউট, সার্ভিস, প্রজেক্ট, কন্টাক্ট, ক্যারিয়ার সব ঘুরে দেখতে পারবেন।"
+  },
+  {
+    "id": "23-end",
+    "kind": "card",
+    "title": "ধন্যবাদ",
+    "subtitle": "Array Architects  •  Developed by Udoy",
+    "label": "শেষ",
+    "text": "এই ছিল পুরো ওয়েবসাইটের ওভারভিউ। পেজ ঘুরে দেখুন, ফর্ম ব্যবহার করুন, আর লাইভ লিংক শেয়ার করুন। আল্লাহ হাফেজ।"
+  }
+]

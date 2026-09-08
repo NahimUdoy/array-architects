@@ -2,3 +2,7 @@
 .vscode/
 .netlify/
 node_modules/
+docs/tutorial/frames/
+docs/tutorial/audio/
+docs/tutorial/clips/
+docs/tutorial/_capture.js
