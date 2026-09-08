@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: array-architects
+    runtime: static
+    buildCommand: echo "Static HTML site"
+    staticPublishPath: .
