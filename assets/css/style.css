@@ -1883,6 +1883,17 @@ textarea.form-control {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-bottom a {
+    color: var(--accent-color);
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #e8c547;
+    text-decoration: underline;
+}
+
 /* Footer social icons */
 .footer .footer-social {
     display: flex;
