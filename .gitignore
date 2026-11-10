@@ -6,3 +6,7 @@ docs/tutorial/frames/
 docs/tutorial/audio/
 docs/tutorial/clips/
 docs/tutorial/_capture.js
+uploads/*
+!uploads/.htaccess
+docs/showcase/shots/
+docs/showcase/music.wav

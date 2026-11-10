@@ -10,12 +10,20 @@
     document.addEventListener('DOMContentLoaded', function() {
         initNavbar();
         initSmoothScroll();
-        initPortfolioFilter();
         initFormValidation();
         initModal();
         initFloatingWidget();
-        initCareerApply();
+        bindDynamicContent();
+        document.addEventListener('cms:ready', bindDynamicContent);
+        setTimeout(function() {
+            if (!window.AtelierNovaCMS) bindDynamicContent();
+        }, 1200);
     });
+
+    function bindDynamicContent() {
+        initPortfolioFilter();
+        initCareerApply();
+    }
 
     // ===== NAVBAR FUNCTIONALITY =====
     function initNavbar() {
@@ -75,6 +83,8 @@
         if (!filterButtons.length || !portfolioItems.length) return;
 
         filterButtons.forEach(button => {
+            if (button.dataset.bound === '1') return;
+            button.dataset.bound = '1';
             button.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
 
@@ -104,6 +114,8 @@
 
         // Add click handler to portfolio items for modal
         portfolioItems.forEach(item => {
+            if (item.dataset.clickBound === '1') return;
+            item.dataset.clickBound = '1';
             item.addEventListener('click', function() {
                 const category = this.getAttribute('data-category');
                 const title = this.querySelector('.portfolio-overlay h4')?.textContent || 'Project Title';
@@ -147,41 +159,32 @@
         if (!modal || !modalBody) return;
 
         // Map project titles to images
-        const projectImages = {
-            'Modern Residential Complex': 'assets/images/project1.jpg',
-            'Luxury Villa Design': 'assets/images/project2_1.jpg',
-            'Apartment Building': 'assets/images/project2_2.jpg',
-            'Corporate Headquarters': 'assets/images/project2.jpg',
-            'Retail Complex': 'assets/images/banner1.jpg',
-            'Boutique Hotel': 'assets/images/banner2.jpg',
-            'Educational Campus': 'assets/images/banner3.jpg',
-            'Medical Facility': 'assets/images/banner4.jpg',
-            'Modern Office Interior': 'assets/images/project2_1.jpg',
-            'Luxury Residence Interior': 'assets/images/project2_2.jpg',
-            'Restaurant Design': 'assets/images/project1.jpg'
-        };
-
-        const projectImage = projectImages[title] || 'assets/images/project1.jpg';
-
-        // Project data (in Laravel, this would come from API/database)
-        const projectData = {
+        const fromCms = (window.AtelierNovaCMS && window.AtelierNovaCMS.projects || []).find(function(p) {
+            return p.title === title;
+        });
+        const projectImage = (fromCms && fromCms.image) || 'assets/images/project1.jpg';
+        const projectData = fromCms ? {
+            title: fromCms.title,
+            location: fromCms.location,
+            category: fromCms.category || category,
+            description: fromCms.description,
+            features: fromCms.features || [],
+            year: fromCms.year || '2023',
+            area: fromCms.area || '',
+            status: fromCms.status || 'Completed',
+            client: fromCms.client || 'Confidential',
+            duration: fromCms.duration || ''
+        } : {
             title: title,
             location: location,
             category: category,
-            description: `This is a detailed description of the ${title} project located in ${location}. The project showcases our expertise in ${category} design, featuring innovative solutions, sustainable practices, and exceptional attention to detail. Our team worked closely with the client to deliver a space that perfectly balances functionality, aesthetics, and sustainability.`,
-            features: [
-                'Modern architectural design',
-                'Sustainable building practices',
-                'Energy-efficient systems',
-                'Premium materials and finishes',
-                'Comprehensive project management',
-                'Client-focused approach'
-            ],
+            description: `This is a detailed description of the ${title} project located in ${location}.`,
+            features: [],
             year: '2023',
-            area: '5,000 sq ft',
+            area: '',
             status: 'Completed',
             client: 'Confidential',
-            duration: '12 months'
+            duration: ''
         };
 
         // Build modal content
@@ -435,27 +438,29 @@
     }
 
     function submitForm(formData) {
-        // In Laravel, this would be:
-        // fetch('/api/inquiries', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(formData)
-        // })
-        // .then(response => response.json())
-        // .then(data => { showSuccess(); resetForm(); })
-        // .catch(error => { showError(); });
-
-        // Simulate API call
-        setTimeout(() => {
+        fetch('api/index.php?r=inquiry', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+                project_type: formData.project_type,
+                project_location: formData.project_location,
+                budget: formData.budget_range,
+                description: formData.description,
+                contact_method: formData.preferred_contact_method
+            })
+        })
+        .then(function(res) { return res.json(); })
+        .then(function(json) {
+            if (!json.ok) throw new Error(json.error || 'Could not send inquiry');
             showSuccessMessage();
             resetForm();
-            
-            // Scroll to success message
-            const successMsg = document.getElementById('successMessage');
-            if (successMsg) {
-                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }, 500);
+        })
+        .catch(function(err) {
+            alert(err.message || 'Could not send your inquiry. Please try again.');
+        });
     }
 
     function showSuccessMessage() {
@@ -539,7 +544,7 @@
     }
 
     // Export functions for Laravel integration (if needed)
-    window.ArrayArchitects = {
+    window.AtelierNova = {
         validateForm: validateForm,
         collectFormData: collectFormData,
         openProjectModal: openProjectModal,
@@ -555,15 +560,16 @@
         const sendResumeBtn = document.getElementById('sendResumeBtn');
 
         // Handle Email Directly button
-        if (emailDirectlyBtn) {
+        if (emailDirectlyBtn && emailDirectlyBtn.dataset.bound !== '1') {
+            emailDirectlyBtn.dataset.bound = '1';
             emailDirectlyBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 const emailBody = [
                     'General Application Inquiry',
                     '',
-                    'Dear Array Architects Team,',
+                    'Dear Atelier Nova Team,',
                     '',
-                    'I am interested in career opportunities with Array Architects.',
+                    'I am interested in career opportunities with Atelier Nova.',
                     '',
                     'Please find my details below:',
                     '',
@@ -581,8 +587,8 @@
                 ].join('\n');
 
                 const mailto = buildMailto({
-                    to: 'arrayarchitectsbd@gmail.com',
-                    subject: 'General Application - Array Architects',
+                    to: 'hello@ateliernova.demo',
+                    subject: 'General Application - Atelier Nova',
                     body: emailBody
                 });
 
@@ -591,15 +597,16 @@
         }
 
         // Handle Send Your Resume button
-        if (sendResumeBtn) {
+        if (sendResumeBtn && sendResumeBtn.dataset.bound !== '1') {
+            sendResumeBtn.dataset.bound = '1';
             sendResumeBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 const emailBody = [
                     'Resume Submission - General Application',
                     '',
-                    'Dear Array Architects Team,',
+                    'Dear Atelier Nova Team,',
                     '',
-                    'I am interested in future career opportunities with Array Architects.',
+                    'I am interested in future career opportunities with Atelier Nova.',
                     '',
                     'Please find my resume and portfolio attached.',
                     '',
@@ -614,7 +621,7 @@
                 ].join('\n');
 
                 const mailto = buildMailto({
-                    to: 'arrayarchitectsbd@gmail.com',
+                    to: 'hello@ateliernova.demo',
                     subject: 'Resume Submission - General Application',
                     body: emailBody
                 });
@@ -626,6 +633,8 @@
         if (!applyButtons.length || !applicationForm || !positionField) return;
 
         applyButtons.forEach(btn => {
+            if (btn.dataset.bound === '1') return;
+            btn.dataset.bound = '1';
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 const jobTitle = this.getAttribute('data-job') || '';
@@ -638,6 +647,9 @@
             });
         });
 
+        if (applicationForm.dataset.bound === '1') return;
+        applicationForm.dataset.bound = '1';
+
         applicationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -649,13 +661,11 @@
             const portfolio = document.getElementById('portfolioLink')?.value.trim() || '';
             const message = document.getElementById('coverMessage')?.value.trim() || '';
 
-            // Validate required fields
             if (!name || !email || !phone || !position || !message) {
                 alert('Please fill in all required fields marked with *.');
                 return false;
             }
 
-            // Validate email format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert('Please enter a valid email address.');
@@ -663,39 +673,20 @@
                 return false;
             }
 
-            // Build email body
-            const emailBody = [
-                'Job Application Submission',
-                '',
-                'Personal Information:',
-                `Name: ${name}`,
-                `Email: ${email}`,
-                `Phone/WhatsApp: ${phone}`,
-                '',
-                'Application Details:',
-                `Position Applied For: ${position}`,
-                portfolio ? `Portfolio/Drive Link: ${portfolio}` : 'Portfolio: Not provided',
-                '',
-                'Cover Message:',
-                message,
-                '',
-                '---',
-                'This application was submitted through the Array Architects website.'
-            ].filter(Boolean).join('\n');
-
-            const mailto = buildMailto({
-                to: 'arrayarchitectsbd@gmail.com',
-                subject: `Job Application: ${position}`,
-                body: emailBody
+            fetch('api/index.php?r=apply', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, phone, position, portfolio, message })
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(json) {
+                if (!json.ok) throw new Error(json.error || 'Could not send application');
+                alert('Your application was sent. We will contact you soon.');
+                applicationForm.reset();
+            })
+            .catch(function(err) {
+                alert(err.message || 'Could not send your application.');
             });
-
-            // Open email client
-            window.location.href = mailto;
-            
-            // Show success message
-            setTimeout(() => {
-                alert('Your email client should open now. Please send the email to complete your application.');
-            }, 100);
             
             return false;
         });

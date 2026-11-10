@@ -2,24 +2,24 @@
   {
     "id": "01-intro",
     "kind": "card",
-    "title": "Array Architects",
+    "title": "Atelier Nova",
     "subtitle": "Website tutorial",
     "label": "পরিচিতি",
-    "text": "আসসালামু আলাইকুম। আজকে আমি Array Architects ওয়েবসাইটটা দেখাব। এটা ঢাকার একটি আর্কিটেকচার ফার্মের সাইট। আমি পেজগুলো দেখাব, আর ঠিক যে জিনিসটা স্ক্রিনে আছে, সেটাই বলব। শেষে বলব কিভাবে এই প্রজেক্ট খুলে ব্যবহার করবেন।"
+    "text": "আসসালামু আলাইকুম। আজকে আমি Atelier Nova ওয়েবসাইটটা দেখাব। এটা ঢাকার একটি আর্কিটেকচার ফার্মের সাইট। আমি পেজগুলো দেখাব, আর ঠিক যে জিনিসটা স্ক্রিনে আছে, সেটাই বলব। শেষে বলব কিভাবে এই প্রজেক্ট খুলে ব্যবহার করবেন।"
   },
   {
     "id": "02-home-hero",
     "kind": "shot",
     "file": "home.png",
     "label": "হোমপেজ",
-    "text": "এখন হোমপেজ দেখা যাচ্ছে। মাঝে বড় করে লেখা Array Architects। নিচে ইংরেজিতে লেখা, We turn ideas into works of art। মানে, আপনার আইডিয়াকে সুন্দর ডিজাইনে রূপ দেওয়া। পেছনে বিল্ডিং এর ছবি।"
+    "text": "এখন হোমপেজ দেখা যাচ্ছে। মাঝে বড় করে লেখা Atelier Nova। নিচে ইংরেজিতে লেখা, We turn ideas into works of art। মানে, আপনার আইডিয়াকে সুন্দর ডিজাইনে রূপ দেওয়া। পেছনে বিল্ডিং এর ছবি।"
   },
   {
     "id": "03-navbar",
     "kind": "shot",
     "file": "navbar.png",
     "label": "উপরের মেনু",
-    "text": "এখন উপরের মেনু দেখুন। বামে লোগো Array Architects। মাঝে পেজের নাম—Home, About, Services, Projects, Contact, Careers। যে পেজে আছেন সেটা হলুদ করে হাইলাইট হয়। ডানদিকে সবুজ Call Now বাটন। এখানে চাপলে ফোন যাবে, নম্বর শূন্য এক আট চার চার, পাঁচ দুই শূন্য দুই শূন্য এক।"
+    "text": "এখন উপরের মেনু দেখুন। বামে লোগো Atelier Nova। মাঝে পেজের নাম—Home, About, Services, Projects, Contact, Careers। যে পেজে আছেন সেটা হলুদ করে হাইলাইট হয়। ডানদিকে সবুজ Call Now বাটন। এখানে চাপলে ফোন যাবে, নম্বর শূন্য এক আট চার চার, পাঁচ দুই শূন্য দুই শূন্য এক।"
   },
   {
     "id": "04-hero-buttons",
@@ -131,7 +131,7 @@
     "kind": "shot",
     "file": "footer.png",
     "label": "ফুটার",
-    "text": "পেজের একদম নিচে ফুটার। কপিরাইট Array Architects। পাশে লেখা Developed by Udoy। Udoy শব্দটা সোনালি লিংক। ক্লিক করলে ডেভেলপারের ওয়েবসাইট খুলবে, udoyweb.netlify.app।"
+    "text": "পেজের একদম নিচে ফুটার। কপিরাইট Atelier Nova। পাশে লেখা Developed by Udoy। Udoy শব্দটা সোনালি লিংক। ক্লিক করলে ডেভেলপারের ওয়েবসাইট খুলবে, udoyweb.netlify.app।"
   },
   {
     "id": "20-how-to",
@@ -163,7 +163,7 @@
     "id": "23-end",
     "kind": "card",
     "title": "ধন্যবাদ",
-    "subtitle": "Array Architects  •  Developed by Udoy",
+    "subtitle": "Atelier Nova  •  Developed by Udoy",
     "label": "শেষ",
     "text": "এই ছিল পুরো ওয়েবসাইটের ওভারভিউ। পেজ ঘুরে দেখুন, ফর্ম ব্যবহার করুন, আর লাইভ লিংক শেয়ার করুন। আল্লাহ হাফেজ।"
   }

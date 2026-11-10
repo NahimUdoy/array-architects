@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Atelier Nova</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/admin.css">
+</head>
+<body>
+    <div class="login-wrap">
+        <form class="login-card" id="loginForm">
+            <div class="login-brand">Atelier <span>Nova</span></div>
+            <p class="hint">Sign in to manage the studio website.</p>
+            <div class="form-grid">
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" required autocomplete="username">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" required autocomplete="current-password">
+                </div>
+                <button class="btn btn-accent" type="submit"><i class="fas fa-lock"></i> Sign in</button>
+                <p class="muted" id="loginError"></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        const API = '../api/index.php';
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const err = document.getElementById('loginError');
+            err.textContent = '';
+            const res = await fetch(API + '?r=login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: document.getElementById('email').value,
+                    password: document.getElementById('password').value
+                })
+            });
+            const json = await res.json();
+            if (!json.ok) {
+                err.textContent = json.error || 'Could not sign in.';
+                return;
+            }
+            location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,11 +1,12 @@
 <div align="center">
 
-# Array Architects
+# Atelier Nova
 
-**Architecture & Design Studio Website**  
+**Demo architecture studio website**  
 HTML • CSS • Bootstrap 5 • JavaScript
 
-**Live:** [https://array-architects.onrender.com](https://array-architects.onrender.com)
+**Live:** [https://array-architects.onrender.com](https://array-architects.onrender.com)  
+**Showcase video:** [Atelier Nova cinematic tour](assets/tutorial/Atelier-Nova-Cinematic-Showcase.mp4)
 
 </div>
 
@@ -13,9 +14,11 @@ HTML • CSS • Bootstrap 5 • JavaScript
 
 ## Project overview
 
-Array Architects is a client-facing website for an architecture studio in Dhaka, Bangladesh. It presents the firm’s services, design philosophy, project portfolio, and hiring pipeline, with direct call and WhatsApp paths so visitors can start a project or apply for a role.
+**Atelier Nova** is a fictional demo studio used to showcase this frontend. It is not a real client site. The UI covers services, design philosophy, a sample portfolio, and a hiring flow, with placeholder call and WhatsApp actions.
 
-It is a static frontend (no build step) and is suitable for architecture firms, interior studios, urban-planning practices, and similar portfolio sites.
+It is a static frontend (no build step) and is suitable as a template for architecture firms, interior studios, and similar portfolio websites.
+
+Demo contact placeholders: `01700-000000`, `hello@ateliernova.demo`, Demo Studio, 12 Example Road, Dhaka. Footer credit: Developed by [Udoy](https://udoyweb.netlify.app/).
 
 ---
 
@@ -29,27 +32,31 @@ It is a static frontend (no build step) and is suitable for architecture firms, 
 
 ---
 
-## Bangla video tutorial
+The public URL still uses the existing Render service name (`array-architects.onrender.com`). The on-site brand is Atelier Nova.
 
-Easy Bangla walkthrough of the full website (~6 minutes). The picture and the voice stay on the same thing: menu, Call Now, services, projects, contact form, careers, mobile, and how to open the project locally.
+---
 
-[![Play Bangla tutorial](assets/screenshots/01-home.png)](assets/tutorial/Array-Architects-Bangla-Overview.mp4)
+## Cinematic showcase
 
-**Watch / download:** [Array-Architects-Bangla-Overview.mp4](assets/tutorial/Array-Architects-Bangla-Overview.mp4)
+Watch the 1:27 product tour — every public page, the admin CMS, and mobile — with original royalty-free music.
 
-<video src="assets/tutorial/Array-Architects-Bangla-Overview.mp4" controls preload="metadata" width="100%">
-  <a href="assets/tutorial/Array-Architects-Bangla-Overview.mp4">Play the Bangla tutorial video</a>
-</video>
+<p align="center">
+  <a href="assets/tutorial/Atelier-Nova-Cinematic-Showcase.mp4">
+    <img src="assets/screenshots/00-showcase-poster.png" alt="Play Atelier Nova cinematic showcase" width="900">
+  </a>
+</p>
 
-Voice: Bangladesh Bangla. Covers Home, About, Services, Projects, Contact, Careers, footer credit, and local XAMPP setup.
+<p align="center">
+  <a href="assets/tutorial/Atelier-Nova-Cinematic-Showcase.mp4"><strong>▶ Play cinematic showcase (MP4)</strong></a>
+</p>
 
 ---
 
 ## Visual overview
 
-Screenshots from the live site, ready to drop into a portfolio, pitch, or GitHub README.
+Fresh captures from the current Atelier Nova site (desktop 1440×900).
 
-**Desktop (1440×900)**
+**Desktop**
 
 | Home | About |
 | :---: | :---: |
@@ -66,16 +73,24 @@ Screenshots from the live site, ready to drop into a portfolio, pitch, or GitHub
 | ![Contact](assets/screenshots/05-contact.png) | ![Careers](assets/screenshots/06-careers.png) |
 | [Open page](https://array-architects.onrender.com/contact.html) | [Open page](https://array-architects.onrender.com/careers.html) |
 
+**Admin panel**
+
+| Dashboard | Service editor |
+| :---: | :---: |
+| ![Admin dashboard](assets/screenshots/08-admin.png) | ![Admin editor](assets/screenshots/09-admin-editor.png) |
+| [Open admin](http://localhost/2026/array-architects/admin/) | Image upload + live website preview |
+
 **Mobile (Home)**
 
 <p align="center">
   <img src="assets/screenshots/07-home-mobile.png" alt="Home on mobile" width="320">
 </p>
 
-**Full-page captures** (entire scroll, for decks or case studies) live in `assets/screenshots/`:
+**File index**
 
 | File | Page |
 | --- | --- |
+| `00-showcase-poster.png` | Cinematic video poster |
 | `01-home.png` / `01-home-full.png` | Home |
 | `02-about.png` / `02-about-full.png` | About |
 | `03-services.png` / `03-services-full.png` | Services |
@@ -83,6 +98,8 @@ Screenshots from the live site, ready to drop into a portfolio, pitch, or GitHub
 | `05-contact.png` / `05-contact-full.png` | Contact |
 | `06-careers.png` / `06-careers-full.png` | Careers |
 | `07-home-mobile.png` | Home (mobile) |
+| `08-admin.png` | Admin dashboard |
+| `09-admin-editor.png` | Admin service editor |
 
 ---
 
@@ -136,8 +153,8 @@ flowchart TB
 | --- | :---: | :---: | :---: | :---: | :---: | :---: |
 | Responsive layout (mobile / tablet / desktop) | Yes | Yes | Yes | Yes | Yes | Yes |
 | Sticky navbar + active page state | Yes | Yes | Yes | Yes | Yes | Yes |
-| Click-to-call (`+880 1844-520201`) | Yes | Yes | Yes | Yes | Yes | Yes |
-| WhatsApp chat (`wa.me/8801844520201`) | Yes | Yes | Yes | Yes | Yes | Yes |
+| Click-to-call (`+880 1700-000000`) | Yes | Yes | Yes | Yes | Yes | Yes |
+| WhatsApp chat (`wa.me/8801700000000`) | Yes | Yes | Yes | Yes | Yes | Yes |
 | Floating call / WhatsApp buttons | Yes | Yes | Yes | Yes | Yes | Yes |
 | SEO meta tags + semantic HTML | Yes | Yes | Yes | Yes | Yes | Yes |
 | Page hero with photography | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -234,12 +251,16 @@ array-architects/
 ├── projects.html       Portfolio
 ├── contact.html        Inquiry form
 ├── careers.html        Jobs + application
+├── admin/              Studio admin panel
+├── api/                PHP API for CMS data
 ├── assets/
 │   ├── css/style.css
 │   ├── js/main.js
+│   ├── js/cms.js
 │   ├── images/
-│   ├── screenshots/    Page captures for README and portfolios
-│   └── tutorial/       Bangla overview video
+│   ├── screenshots/    README captures (current UI + admin)
+│   └── tutorial/
+│       └── Atelier-Nova-Cinematic-Showcase.mp4
 ├── render.yaml         Render static-site config
 └── README.md
 ```
